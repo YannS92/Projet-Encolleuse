@@ -1,0 +1,26 @@
+; --------------------------------------------------- Initialisation et positionnement ---------------------------------------------------;
+G28  ; Retour à la position d'origine
+G1 Z15 ;paramétrage de l'axe Z à 15 mm mais à changer avec la bonne valeur
+G92 Z0 E0
+G4 P1500 ; Pause pour stabiliser
+G1 Z15 F200
+G1 X50 Y30 F2000
+G92 X0 Y0
+T0 ; je n'ai pas tellement compris mais en gros c'est un preset je crois d'après la doc à chercher !!!
+M92 E400 ;Défini les pas de l’axe E à 400 pas/tour de vis
+;----------------------------------------------------------suite----------->
+
+G2 X10 Y10 Z0.8 R10 F600 E0.8
+G1 X96 F600 E0.8
+G2 X106 Y0 R10 F600 E0.8
+G1 Y-34 F600 E0.8
+G2 X96 Y-44 R10 F600 E0.8
+G1 X10 F600 E0.8
+G2 X0 Y-34 R10 F600 E0.8
+G1 Y0 F600 E0.8
+;_____________________FIN_______________
+
+G1 Z50 X-10
+
+
+
